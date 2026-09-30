@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🌤️ Weather App</h1>
+            <p>Cek informasi cuaca suatu kota</p>
+        </header>
+
+        <main>
+
+            <form id="search-form">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Masukkan nama kota..."
+                    required
+                >
+
+                <button type="submit">Cari</button>
+            </form>
+
+            <div class="unit-selector">
+                <span>Satuan:</span>
+
+                <button
+                type="button"
+                class="unit-button active"
+                data-unit="metric"
+                >
+                    °C
+                </button>
+
+                <button
+                type="button"
+                class="unit-button"
+                data-unit="imperial"
+                >
+                    °F
+                </button>
+            </div>
+
+            <section class="search-history">
+                <h3>🕘 Riwayat Pencarian</h3>
+
+                <ul id="history-list">
+                    <li>belum ada riwayat pencarian</li>
+                </ul>
+            </section>
+
+            <div id="status-message"></div>
+
+            <section class="weather-card" id="weather-card">
+
+                <h2 id="city-name">Belum ada kota</h2>
+
+                <p id="current-date"></p>
+
+                <div class="weather-main">
+
+                    <img 
+                        id="weather-icon"
+                        alt="Ikon cuaca"
+                    >
+
+                    <div>
+                        <span id="temperature">--</span><span id="temperature-unit">°C</span>
+                    </div>
+
+                </div>
+
+                <p id="weather-description">
+                    Masukkan nama kota untuk melihat cuaca.
+                </p>
+
+                <div class="weather-info">
+
+                    <div>
+                        <span>💧</span>
+                        <p>Kelembapan</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                    <div>
+                        <span>💨</span>
+                        <p>Angin</p>
+                        <strong id="wind">-- km/j</strong>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <p>Tekanan</p>
+                        <strong id="pressure">-- hPa</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Weather App - Tugas Rutin 5</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
